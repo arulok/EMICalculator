@@ -1,0 +1,1 @@
+copy C:\DEVOPS\JENKINS_DEPLOY\EMICalculator.war C:\DEVOPS\tomcat\webapps\ 
