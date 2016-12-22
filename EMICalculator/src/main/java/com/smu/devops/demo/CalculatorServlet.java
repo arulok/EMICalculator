@@ -32,7 +32,7 @@ public class CalculatorServlet extends HttpServlet {
 		int interest = Integer.parseInt(request.getParameter("rate"));
 		double intr = Double.parseDouble(request.getParameter("rate")) / 1200;
 		
-		double payment = princ * intr / (1 - (Math.pow(1/(1 + intr), term)));
+		double payment = calculateEMI(princ, term, intr);
 
 		request.getSession().setAttribute("princ", princ);
 		request.getSession().setAttribute("term", term);
@@ -41,6 +41,11 @@ public class CalculatorServlet extends HttpServlet {
 		
 		response.sendRedirect("index.jsp");
 		
+	}
+
+	public double calculateEMI(int princ, int term, double intr) {
+		double payment = princ * intr / (1 - (Math.pow(1/(1 + intr), term)));
+		return payment;
 	}
 
 	/**
