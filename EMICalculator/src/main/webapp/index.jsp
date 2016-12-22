@@ -28,7 +28,7 @@
 %>
 
 <body>
-	WELCOME TO SMU BANK OF SINGAPORE. !!!
+	WELCOME TO SMU tBANK OF SINGAPORE. !!
 	<p>
 	<center>
 		<form name="calc" method="POST" action="CalculatorServlet">
